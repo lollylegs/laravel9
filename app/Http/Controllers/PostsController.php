@@ -16,7 +16,7 @@ class PostsController extends Controller
     public function index()
     {
         
-        return view('blog.index', ['Index Method of Blogs']);
+        return view('blog.index');
             
     }
 
@@ -46,10 +46,11 @@ class PostsController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+    
      */
     public function show($id)
     {
-        //
+        return $id;
     }
 
     /**

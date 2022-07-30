@@ -19,7 +19,7 @@ use App\Http\Controllers\PostsController;
 
 // GET
 Route::get('/blog', [PostsController::class, 'index']);
-Route::get('/blog/1', [PostsController::class, 'show']);
+Route::get('/blog/{id}', [PostsController::class, 'show']);
 
 
 //POST
@@ -27,11 +27,11 @@ Route::get('/blog/create', [PostsController::class, 'create']);
 Route::post('/blog', [PostsController::class, 'store']);
 
 // PUT OR PATCH
-Route::get('/blog/edit/1', [PostsController::class, 'edit']);
+Route::get('/blog/edit/{id}', [PostsController::class, 'edit']);
 Route::patch('/blog/1', [PostsController::class, 'update']);
 
 //DELETE
-Route::delete('/blog/1', [PostsController::class, 'destroy']);
+Route::delete('/blog/{id}', [PostsController::class, 'destroy']);
 
 //Route::resource('blog', PostsController::class);
 
